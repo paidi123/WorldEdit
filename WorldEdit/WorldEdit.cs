@@ -41,7 +41,7 @@ namespace WorldEdit
 
 		public static readonly HandlerCollection<CanEditEventArgs> CanEdit;
 
-		public override string Author => "Nyx Studios, massive upgrade by Anzhelika";
+		public override string Author => "Nyx Studios, Anzhelika, Rozen4334 (Documentation & Updates for compatibility)";
 		private readonly CancellationTokenSource _cancel = new CancellationTokenSource();
 		private readonly BlockingCollection<WECommand> _commandQueue = new BlockingCollection<WECommand>();
 		public override string Description => "Adds commands for mass editing of blocks.";
@@ -284,8 +284,12 @@ namespace WorldEdit
 
 			OnReload(null);
 
-            #region Commands
-            TShockAPI.Commands.ChatCommands.Add(new Command("worldedit.admin", EditConfig, "/worldedit", "/wedit")
+			#region Commands
+			TShockAPI.Commands.ChatCommands.Add(new Command("worldedit.documentation", Documentation, "/edithelp", "/wedithelp")
+			{
+				HelpText = "Displays link to the documentation page."
+			});
+			TShockAPI.Commands.ChatCommands.Add(new Command("worldedit.admin", EditConfig, "/worldedit", "/wedit")
             {
                 HelpText = "Edits config options."
             });
@@ -704,6 +708,12 @@ namespace WorldEdit
 			}
 		}
 
+		private void Documentation(CommandArgs e)
+        {
+			if (e.Parameters.Count != 0)
+				return;
+			else e.Player.SendInfoMessage("You can find the worldedit documentation on: 'https://terrariabuilders.com/worldedit'!");
+        }
         private void EditConfig(CommandArgs e)
         {
             if (e.Parameters.Count < 1 || e.Parameters.Count > 2)
