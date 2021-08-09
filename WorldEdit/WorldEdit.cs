@@ -712,7 +712,7 @@ namespace WorldEdit
         {
 			if (e.Parameters.Count != 0)
 				return;
-			else e.Player.SendInfoMessage("You can find the worldedit documentation on: 'https://terrariabuilders.com/worldedit'!");
+			else e.Player.SendInfoMessage("You can find the worldedit documentation on: 'https://dev.rozen.one/'!");
         }
         private void EditConfig(CommandArgs e)
         {
