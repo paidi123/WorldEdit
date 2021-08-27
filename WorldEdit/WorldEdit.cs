@@ -41,12 +41,12 @@ namespace WorldEdit
 
 		public static readonly HandlerCollection<CanEditEventArgs> CanEdit;
 
-		public override string Author => "Nyx Studios, Anzhelika, Rozen4334 (Documentation & Updates for compatibility)";
+		public override string Author => "Nyx Studios, Anzhelika, Rozen4334";
 		private readonly CancellationTokenSource _cancel = new CancellationTokenSource();
 		private readonly BlockingCollection<WECommand> _commandQueue = new BlockingCollection<WECommand>();
-		public override string Description => "Adds commands for mass editing of blocks.";
+		public override string Description => "Adds commands for mass editing of blocks. Documentation at: https://rozen.one/worldedit.html";
 		public override string Name => "WorldEdit";
-		public override Version Version => Assembly.GetExecutingAssembly().GetName().Version;
+		public override Version Version => new Version(2, 0);
 
 		static WorldEdit()
 		{
