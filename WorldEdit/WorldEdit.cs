@@ -1989,6 +1989,25 @@ namespace WorldEdit
 			string subCmd = e.Parameters.Count == 0 ? "help" : e.Parameters[0].ToLowerInvariant();
 			switch (subCmd)
 			{
+				case "to1.4":
+				case "translate1.4":
+					{
+						if (!e.Player.HasPermission("worldedit.schematic.translate"))
+						{
+							e.Player.SendErrorMessage("You do not have permission to translate schematics.");
+							return;
+						}
+
+						string path = Path.Combine(WorldEditFolderName, string.Format(fileFormat, e.Parameters[1]));
+
+						if (!File.Exists(path))
+							e.Player.SendErrorMessage("Invalid schematic '{0}'!", e.Parameters[1]);
+						else if (!Tools.Translate(path, true))
+							e.Player.SendErrorMessage("Could not translate schematic. Check logs for more info.");
+						else
+							e.Player.SendSuccessMessage("Translated schematic '{0}'.", e.Parameters[1]);
+					}
+					return;
 				case "del":
 				case "delete":
                     {
@@ -2295,7 +2314,8 @@ namespace WorldEdit
                                            ? "/sc save/s id\n"
                                            : "")
                                            + "/sc copysave/cs <name>\n"
-                                           + "/sc paste/p <name> [alignment] [-f] [=> boolean expr...]");
+                                           + "/sc paste/p <name> [alignment] [-f] [=> boolean expr...]\n"
+										   + "/sc to1.4 <name>");
                     return;
 			}
 		}
