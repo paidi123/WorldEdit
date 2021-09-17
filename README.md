@@ -1,5 +1,5 @@
 # WorldEdit
-A Terraria plugin including many mass tile editing features. Documentation on commands is in on the webpage below.
+A Terraria plugin including many mass tile editing features. Documentation on commands is included.
 
 
 ## Basic command usage
