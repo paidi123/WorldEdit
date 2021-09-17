@@ -270,3 +270,5 @@ _      This would add a wood wall to every green painted tile in the selec
 
 **.admin** : /worldedit, /wedit  
 
+**.usage.everywhere** : Use commands outside of regions.
+
