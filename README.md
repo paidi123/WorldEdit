@@ -1,22 +1,6 @@
 # WorldEdit
 A Terraria plugin including many mass tile editing features. Documentation on commands is in on the webpage below.
 
-  
-
-<header class="stickytop">
-
-<div class="header mid">
-
-<div>![](files/logo.gif)</div>
-
-<header class="header mid">
-
-<div>
-
-*   **         Rozen, Freelance Developer**
-*   [GitHub](https://github.com/rozen4334)
-*   [Guides](Index.html)
-*   [About me](https://rozen.one/Index.html)
 
 ## Basic command usage
 
