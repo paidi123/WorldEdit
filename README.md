@@ -18,11 +18,11 @@ _You can use the Grand Design to drag a full region, this selects all tiles in s
 **//copy //c** : Copies the selection to the clipboard.  
 
 **//paste //p (direction)** : Pastes the clipboard to the first point. Directions can be appointed to change from what point the clipboard pastes.  
-_   Applicable directions:_  
-**      tl** : TopLeft (default), this pastes the clipboard from the top left to the bottom right.  
-**      bl** : BottomLeft, bottom left to the top right.  
-**      tr** : TopRight, top right to bottom left.  
-**      br** : BottomRight, bottom right to top left.  
+  _Applicable directions:_  
+    **tl** : TopLeft (default), this pastes the clipboard from the top left to the bottom right.  
+    **bl** : BottomLeft, bottom left to the top right.  
+    **tr** : TopRight, top right to bottom left.  
+    **br** : BottomRight, bottom right to top left.  
 
 **//setwall (wall) [=> boolean expr]** : Sets all of the walls in the selection to (wall).  
 
@@ -60,15 +60,15 @@ _   Applicable directions:_
 **Full coverage of all advanced functions in stale command usage. This chapter is useful even to people who have been using WorldEdit for a long period of time, as it can often be surprising how little is known about the true function of this plugin.**
 
 **//biome (biome1) (biome2)** : Converts all of the tiles in the selection that correspond to (biome1) to the tiles that correspond with (biome2).  
-_   Biome’s applicable:_  
-**      forest**  
-**      crimson**  
-**      corruption**  
-**      hallow**  
-**      jungle** (Only works with Mushroom)  
-**      mushroom** (Only works with Jungle)  
-**      desert** (Does not work with anything)  
-**      snow** (Does not work with anything)  
+  _Biome’s applicable:_  
+    **forest**  
+    **crimson**  
+    **corruption**  
+    **hallow**  
+    **jungle** (Only works with Mushroom)  
+    **mushroom** (Only works with Jungle)  
+    **desert** (Does not work with anything)  
+    **snow** (Does not work with anything)  
 
 **//inactive (on/off/reverse)** : Actuates tiles in the worldedit selection, turning them active/inactive.  
 
@@ -100,7 +100,7 @@ Directions are left, right, up and down. The amount is measured in blocks.
 **//rotate (degrees)** : Rotates the clipboard's contents by the specified angle, in degrees. Only multiples of 90 are accepted.  
 
 **//select (selection type)** : Sets the way that tiles are selected.  
-_   Arguments applicable:_  
+  _Arguments applicable:_  
       **normal** : Default selection, Sets in the full region  
       **altcheckers** : Sets in an alternate checker pattern  
       **checkers** : Sets in a checker pattern  
@@ -110,7 +110,7 @@ _   Arguments applicable:_
       **border** : Sets the border of the region  
       **45** : Sets on a 45 degree angle  
       **225** : Sets on a 225 degree angle  
-_   Always set the selection back to this selection after finishing your edits!_  
+  _Always set the selection back to this selection after finishing your edits!_  
 
 **//shift (direction(s)) (amount)** : Moves the selection to (direction) by (amount). Directions are left, right, up and down. The amount is measured in blocks.  
 
@@ -124,8 +124,8 @@ _   Always set the selection back to this selection after finishing your edit
 **This chapter elaborates functionality within booleans & how to use them.**
 
 Some commands accept boolean expressions, allowing you to change the conditions of the command. To use boolean expressions you have to know and use the right variables.  
-_   Applicable boolean values:_  
-**      tile (t)  
+  _Applicable boolean values:_  
+      **tile (t)  
       wall (w)  
       tilepaint (tp)  
       wallpaint (wp)  
@@ -143,11 +143,11 @@ Boolean expressions work like this: **=> t** checks if there's a tile. | **=> t 
 An exception boolean is: **=> !t** checks if there are no tiles | **=> !w** checks if there is no wall.  
 
 With boolean expressions you can do stuff like this:  
-**   //set dirt => t = stone.**  
-_      This would change every stone in the selected area to dirt._  
+    **//set dirt => t = stone.**  
+  _This would change every stone in the selected area to dirt._  
 Another example:  
-**   //setwall wood => tp = green**  
-_      This would add a wood wall to every green painted tile in the selected area._  
+    **//setwall wood => tp = green**  
+  _This would add a wood wall to every green painted tile in the selected area._  
 
 
 ## Permissions
