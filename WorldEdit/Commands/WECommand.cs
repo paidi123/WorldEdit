@@ -81,6 +81,11 @@ namespace WorldEdit.Commands
 		public void SetTile(int i, int j, int tileType)
 		{
 			var tile = Main.tile[i, j];
+			if (TShock.TileBans.TileIsBanned(Convert.ToInt16(tileType)) && !plr.HasPermission("worldedit.usage.ignoretilebans"))
+			{
+				plr.SendErrorMessage("You are not allowed to set banned tiles.");
+				return;
+			}
 			switch (tileType)
 			{
 				case -1:
