@@ -97,22 +97,37 @@ namespace WorldEdit.Commands
 					tile.type = 0;
 					return;
 				case -2:
-					tile.active(false);
-					tile.liquidType(1);
-					tile.liquid = 255;
-					tile.type = 0;
+					if (plr.HasPermission("worldedit.usage.liquids"))
+					{
+						tile.active(false);
+						tile.liquidType(1);
+						tile.liquid = 255;
+						tile.type = 0;
+					}
+					else
+						plr.SendErrorMessage("You are not allowed to set liquids!");
 					return;
 				case -3:
-					tile.active(false);
-					tile.liquidType(2);
-					tile.liquid = 255;
-					tile.type = 0;
+					if (plr.HasPermission("worldedit.usage.liquids"))
+					{
+						tile.active(false);
+						tile.liquidType(2);
+						tile.liquid = 255;
+						tile.type = 0;
+					}
+					else
+						plr.SendErrorMessage("You are not allowed to set liquids!");
 					return;
 				case -4:
-					tile.active(false);
-					tile.liquidType(0);
-					tile.liquid = 255;
-					tile.type = 0;
+					if (plr.HasPermission("worldedit.usage.liquids"))
+					{
+						tile.active(false);
+						tile.liquidType(0);
+						tile.liquid = 255;
+						tile.type = 0;
+					}
+					else
+						plr.SendErrorMessage("You are not allowed to set liquids!");
 					return;
 				default:
 					if (Main.tileFrameImportant[tileType])
