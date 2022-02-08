@@ -244,10 +244,10 @@ Smooths blocks in the selection.
 
 Some commands accept boolean expressions, allowing you to change the conditions of the command. To use boolean expressions you have to know and use the right variables.  
 - Applicable boolean values: 
-  - tile (t)  
-  - wall (w)  
-  - tilepaint (tp)  
-  - wallpaint (wp)  
+  - tile (t)
+  - wall (w)
+  - tilepaint (tp)
+  - wallpaint (wp)
   - honey  
   - water  
   - liquid  
