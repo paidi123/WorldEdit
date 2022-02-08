@@ -1,80 +1,142 @@
 # WorldEdit
+
 A Terraria plugin including many mass tile editing features. Documentation on commands is included.
 
+----
 
-## Basic command usage
-
-**This chapter is for beginners, and explains everything useful to you as a builder starting out with WorldEdit.**
-
-**//point1 //p1** : Sets the first point of the selection.  
+### //point1 //p1
+Sets the first point of the selection.  
 _You can use the Grand Design to drag a full region, this selects all tiles in said region._  
 
-**//point2 //p2** : Sets the second point of the selection.  
+----
 
-**//set (tile) [=> boolean expr]** : Sets all of the tiles in the selection to (tile).  
+### //point2 //p2
+Sets the second point of the selection.  
 
-**//cut** : Removes/Cuts the selection and copies it to the clipboard.  
+----
 
-**//copy //c** : Copies the selection to the clipboard.  
+### //set (tile) [=> boolean expr]
+Sets all of the tiles in the selection to (tile).  
 
-**//paste //p (direction)** : Pastes the clipboard to the first point. Directions can be appointed to change from what point the clipboard pastes.  
-  _Applicable directions:_  
-    **tl** : TopLeft (default), this pastes the clipboard from the top left to the bottom right.  
-    **bl** : BottomLeft, bottom left to the top right.  
-    **tr** : TopRight, top right to bottom left.  
-    **br** : BottomRight, bottom right to top left.  
+----
 
-**//setwall (wall) [=> boolean expr]** : Sets all of the walls in the selection to (wall).  
+### //setwall //sw (wall) [=> boolean expr]
+Sets all of the walls in the selection to (wall).
 
-**//setwire (wire) (state) [=> boolean expr]** : Sets (wire) with (state) in the selection.  
+----  
 
-**//undo [steps] [account]** : Undoes that many (Worldedit)actions for the account, if possible.  
+### //setwire (wire) (state) [=> boolean expr]
+Sets (wire) with (state) in the selection.  
 
-**//redo [steps] [account]** : Redoes that many (Worldedit)actions for the account, if possible.  
+----
 
-**//paint (color) [=> boolean expr]** : Paints all the tiles in the selection to (color). You can use "blank" to remove paint.  
+### //cut
+Removes/Cuts the selection and copies it to the clipboard.
 
-**//paintwall //paw (color) [=> boolean expr]** : Paints all the walls in the selection to (color). You can use "blank" to remove paint.  
+----  
 
-**//region [name]** : Selects a complete TShock region to perform actions on.  
+### //copy //c
+Copies the selection to the clipboard.  
 
-**//schematic /sc** : Shows schematic commands. (or //schem)  
+----
 
-**//schematic /sc delete (name)** : Deletes the schematic (name) if possible.  
+### //paste //p (direction)
+Pastes the clipboard to the first point. Directions can be appointed to change from what point the clipboard pastes.  
+- Applicable directions:
+  - **tl** : TopLeft (default), this pastes the clipboard from the top left to the bottom right.  
+  - **bl** : BottomLeft, bottom left to the top right.  
+  - **tr** : TopRight, top right to bottom left.  
+  - **br** : BottomRight, bottom right to top left.  
 
-**//schematic /sc help** : Lists all schematic commands.  
+----
 
-**//schematic /sc list [page]** : Lists all the available schematics.  
+### //spaste //sp (position) [flags] [=> boolean expr]
+Pastes with special flags.
+- Flags applicable:
+  - **-t**  - Excludes tiles from the clipboard.
+  - **-tp** - Excludes tile paint.
+  - **-w**  - Excludes walls.
+  - **-wp** - Excludes wall paint.
+  - **-wi** - Excludes wires.
+  - **-l**  - Excludes liquids.
 
-**//schematic /sc load (name)** : Loads the schematic (name) to the clipboard if it exists.  
+----
 
-**//schematic /sc save (name)** : Saves the contents of the clipboard to the schematic (name).  
+### //undo [steps] [account]
+Undoes that many (Worldedit)actions for the account, if possible.  
 
-**//drain** : Drains all liquids in the selection.  
+----
 
-**//flood (liquid)** : Floods the selection with (liquid).  
+### //redo [steps] [account]
+Redoes that many (Worldedit)actions for the account, if possible. 
 
+---- 
 
-## Advanced command usage
+### //paint (color) [=> boolean expr]
+Paints all the tiles in the selection to (color). You can use "blank" to remove paint.  
 
-**Full coverage of all advanced functions in stale command usage. This chapter is useful even to people who have been using WorldEdit for a long period of time, as it can often be surprising how little is known about the true function of this plugin.**
+----
 
-**//biome (biome1) (biome2)** : Converts all of the tiles in the selection that correspond to (biome1) to the tiles that correspond with (biome2).  
-  _Biome’s applicable:_  
-    **forest**  
-    **crimson**  
-    **corruption**  
-    **hallow**  
-    **jungle** (Only works with Mushroom)  
-    **mushroom** (Only works with Jungle)  
-    **desert** (Does not work with anything)  
-    **snow** (Does not work with anything)  
+### //paintwall //paw (color) [=> boolean expr]
+Paints all the walls in the selection to (color). You can use "blank" to remove paint.  
 
-**//inactive (on/off/reverse)** : Actuates tiles in the worldedit selection, turning them active/inactive.  
+----
 
-**//activate** : Activates non-working signs, chests or item frames  
+### //region [name]
+Selects a complete TShock region to perform actions on. 
 
-**//fixghosts** : Fixes invisible signs, chests and item frames.  
+---- 
+
+### //drain
+Drains all liquids in the selection.  
+
+----
+
+### //flood (liquid)
+Floods the selection with (liquid).  
+
+----
+
+### //schematic //schem /sc
+Shows schematic commands. 
+
+#### delete (name)
+Deletes the schematic (name) if possible. 
+
+#### help 
+Lists all schematic commands.  
+
+#### list [page]
+Lists all the available schematics.  
+
+#### load (name)
+Loads the schematic (name) to the clipboard if it exists.  
+
+#### save (name)
+Saves the contents of the clipboard to the schematic (name).  
+
+----
+
+### //biome (biome1) (biome2)
+Converts all of the tiles in the selection that correspond to (biome1) to the tiles that correspond with (biome2).  
+- Biome’s applicable:
+  - **forest**  
+  - **crimson**  
+  - **corruption**  
+  - **hallow**  
+  - **jungle** (Only works with Mushroom)  
+  - **mushroom** (Only works with Jungle)  
+  - **desert** (Does not work with anything)  
+  - **snow** (Does not work with anything)  
+
+### //inactive (on/off/reverse)
+Actuates tiles in the worldedit selection, turning them active/inactive.  
+
+### //activate
+Activates non-working signs, chests or item frames  
+
+### //fixghosts
+Fixes invisible signs, chests and item frames.  
 
 **//fixgrass** : Fixes suffocated grass in the selection.  
 
