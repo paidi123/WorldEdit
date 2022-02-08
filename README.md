@@ -129,57 +129,109 @@ Converts all of the tiles in the selection that correspond to (biome1) to the ti
   - **desert** (Does not work with anything)  
   - **snow** (Does not work with anything)  
 
+----
+
 ### //inactive (on/off/reverse)
 Actuates tiles in the worldedit selection, turning them active/inactive.  
+
+----
 
 ### //activate
 Activates non-working signs, chests or item frames  
 
+----
+
 ### //fixghosts
 Fixes invisible signs, chests and item frames.  
 
-**//fixgrass** : Fixes suffocated grass in the selection.  
+----
 
-**//fixhalves** : Fixes covered half blocks in the selection.  
+### //fixgrass
+Fixes suffocated grass in the selection.  
 
-**//fixslopes** : Fixes covered slopes in the selection.  
+----
 
-**//mow** : Mows grass, thorns, and vines in the selection.  
+### //fixhalves
+Fixes covered half blocks in the selection. 
 
-**//near (radius)** : Selects an area around you.  
+---- 
 
-**//flip (direction)** : Flips the contents of the clipboard. (direction) can contain any amount of X's and Y's; each occurrence will flip the direction. E.g., XXYY would leave the clipboard unchanged.  
+### //fixslopes
+Fixes covered slopes in the selection.  
 
-**//all** : Selects the entire world.  
+----
 
-**//outline (tile) (color) (state) [=> boolean expr]** : Sets (tile) outline around blocks in selection.  
+### //mow
+Mows grass, thorns, and vines in the selection.  
 
-**//outlinewall (wall) [color] [=> boolean expr]** : Sets (wall) outline around the walls in selection.  
+----
 
-**//resize (direction(s)) (amount)** : Resizes the selection to (direction(s)) by amount.  
+### //near (radius)
+Selects an area around you.  
+
+----
+
+### //flip (direction)
+Flips the contents of the clipboard. (direction) can contain any amount of X's and Y's; each occurrence will flip the direction. E.g., XXYY would leave the clipboard unchanged.  
+
+----
+
+### //all
+Selects the entire world.  
+
+----
+
+### //outline (tile) (color) (state) [=> boolean expr]
+Sets (tile) outline around blocks in selection.  
+
+----
+
+### //outlinewall (wall) [color] [=> boolean expr]
+Sets (wall) outline around the walls in selection.  
+
+----
+
+### //resize (direction(s)) (amount)
+Resizes the selection to (direction(s)) by amount.  
 Directions are left, right, up and down. The amount is measured in blocks.  
 
-**//rotate (degrees)** : Rotates the clipboard's contents by the specified angle, in degrees. Only multiples of 90 are accepted.  
+----
 
-**//select (selection type)** : Sets the way that tiles are selected.  
-  _Arguments applicable:_  
-      **normal** : Default selection, Sets in the full region  
-      **altcheckers** : Sets in an alternate checker pattern  
-      **checkers** : Sets in a checker pattern  
-      **ellipse** : Sets round shapes  
-      **random** : Sets in a random pattern  
-      **outline** : Sets around all abstract block shapes in the region  
-      **border** : Sets the border of the region  
-      **45** : Sets on a 45 degree angle  
-      **225** : Sets on a 225 degree angle  
+### //rotate (degrees)
+Rotates the clipboard's contents by the specified angle, in degrees. Only multiples of 90 are accepted.  
+
+----
+
+### //select (selection type)
+Sets the way that tiles are selected.  
+- Arguments applicable:_  
+  - **normal** : Default selection, Sets in the full region  
+  - **altcheckers** : Sets in an alternate checker pattern  
+  - **checkers** : Sets in a checker pattern  
+  - **ellipse** : Sets round shapes  
+  - **random** : Sets in a random pattern  
+  - **outline** : Sets around all abstract block shapes in the region  
+  - **border** : Sets the border of the region  
+  - **45** : Sets on a 45 degree angle  
+  - **225** : Sets on a 225 degree angle  
   _Always set the selection back to this selection after finishing your edits!_  
 
-**//shift (direction(s)) (amount)** : Moves the selection to (direction) by (amount). Directions are left, right, up and down. The amount is measured in blocks.  
+----
 
-**//scale (scale)** : Scale the clipboard  
+### //shift (direction(s)) (amount)
+Moves the selection to (direction) by (amount). Directions are left, right, up and down. The amount is measured in blocks.  
 
-**//smooth** : Smooths blocks in the selection.  
+----
 
+### //scale (scale)
+Scale the clipboard  
+
+----
+
+### //smooth
+Smooths blocks in the selection.  
+
+----
 
 ## Boolean expressions
 
