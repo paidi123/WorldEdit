@@ -40,7 +40,7 @@ Copies the selection to the clipboard.
 
 ----
 
-### //paste //p (direction)
+### //paste //p (direction) [=> boolean expr]
 Pastes the clipboard to the first point. Directions can be appointed to change from what point the clipboard pastes.  
 - Applicable directions:
   - **tl** : TopLeft (default), this pastes the clipboard from the top left to the bottom right.  
@@ -50,7 +50,7 @@ Pastes the clipboard to the first point. Directions can be appointed to change f
 
 ----
 
-### //spaste //sp (position) [flags] [=> boolean expr]
+### //spaste //sp (direction) [flags] [=> boolean expr]
 Pastes with special flags.
 - Flags applicable:
   - **-t**  - Excludes tiles from the clipboard.
@@ -69,6 +69,11 @@ Undoes that many (Worldedit)actions for the account, if possible.
 
 ### //redo [steps] [account]
 Redoes that many (Worldedit)actions for the account, if possible. 
+
+----
+
+### //size [account]
+Shows the side (dimensions) of your own clipboard, or of anothers, if possible.
 
 ---- 
 
@@ -204,7 +209,7 @@ Rotates the clipboard's contents by the specified angle, in degrees. Only multip
 
 ### //select (selection type)
 Sets the way that tiles are selected.  
-- Arguments applicable:_  
+- Arguments applicable:
   - **normal** : Default selection, Sets in the full region  
   - **altcheckers** : Sets in an alternate checker pattern  
   - **checkers** : Sets in a checker pattern  
@@ -238,23 +243,23 @@ Smooths blocks in the selection.
 **This chapter elaborates functionality within booleans & how to use them.**
 
 Some commands accept boolean expressions, allowing you to change the conditions of the command. To use boolean expressions you have to know and use the right variables.  
-  _Applicable boolean values:_  
-      **tile (t)  
-      wall (w)  
-      tilepaint (tp)  
-      wallpaint (wp)  
-      honey  
-      water  
-      liquid  
-      lava  
-      wire  
-      wire2  
-      wire3  
-      wire4**  
+- Applicable boolean values: 
+  - tile (t)  
+  - wall (w)  
+  - tilepaint (tp)  
+  - wallpaint (wp)  
+  - honey  
+  - water  
+  - liquid  
+  - lava  
+  - wire  
+  - wire2  
+  - wire3  
+  - wire4 
 
 Boolean expressions work like this: **=> t** checks if there's a tile. | **=> t = dirt** checks if the tile is dirt.  
 
-An exception boolean is: **=> !t** checks if there are no tiles | **=> !w** checks if there is no wall.  
+> An exception boolean is: **=> !t** checks if there are no tiles | **=> !w** checks if there is no wall.  
 
 With boolean expressions you can do stuff like this:  
     **//set dirt => t = stone.**  
@@ -348,6 +353,8 @@ Another example:
 
 **.utils.killempty** : /killempty  
 
+**.utils.size** : /size
+
 **.utils.drain** : /drain  
 
 **.utils.flood** : /flood  
@@ -369,4 +376,10 @@ Another example:
 **.admin** : /worldedit, /wedit  
 
 **.usage.everywhere** : Use commands outside of regions.
+
+**.usage.otheraccounts** : Undo & Redo other accounts' history as well as viewing their clipboard sizes.
+
+**.usage.ignoretilebans** : Ability to ignore banned tiles.
+
+**.usage.liquids** : Ability to use liquids.
 
