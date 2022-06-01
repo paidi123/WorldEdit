@@ -24,7 +24,7 @@ namespace WorldEdit.Commands
 
 		public override void Execute()
 		{
-            WorldSectionData data = Tools.LoadWorldData(path);
+			WorldSectionData data = Tools.LoadWorldData(path);
 
 			var width = data.Width - 1;
 			var height = data.Height - 1;
